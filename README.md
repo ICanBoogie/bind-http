@@ -12,6 +12,98 @@ The **icanboogie/bind-http** package binds [icanboogie/http][] to [ICanBoogie][]
 
 
 
+## Defining domain dispatchers using config fragments
+
+Domain dispatchers may be defined using configuration fragments. One actually define dispatcher
+constructors as a class name or a callable, that would return a dispatcher. Constructor class should
+extend the [AbstractDispatcherConstructor][].
+
+The following example demonstrates how some domain dispatchers may be defined:
+
+```php
+<?php
+
+// config/http.php
+
+use ICanBoogie\Binding\HTTP\DispatcherConfig as Config;
+
+return [
+
+	'dispatchers' => [
+
+		'pages' => [
+
+			Config::CONSTRUCTOR => \Icybee\Modules\Pages\PageDispatcher::class,
+			Config::WEIGHT => Config::WEIGHT_BOTTOM
+
+		],
+
+		'routing' => \ICanBoogie\Routing\RouteDispatcher::class,
+
+		'operation' => [
+
+			Config::CONSTRUCTOR => \ICanBoogie\Operation\OperationDispatcher::class,
+			Config::WEIGHT => Config::WEIGHT_BEFORE_PREFIX . 'routing'
+
+		]
+
+	]
+
+];
+```
+
+The dispatchers configuration may be obtained through the application:
+
+```php
+<?php
+
+// …
+
+$config = $app->configs['http_dispatchers'];
+```
+
+
+
+
+
+## Prototype methods
+
+The following prototype methods are defined, the [CoreBindings][] trait may be used for type
+hinting:
+
+- `ICanBoogie\Core::get_initial_request`: Returns the initial request.
+- `ICanBoogie\Core::get_request`: Returns the current request.
+- `ICanBoogie\Core::get_dispatcher`: Returns the request dispatcher.
+
+The following example demonstrates how this getters may be used:
+
+```php
+<?php
+
+namespace ICanBoogie;
+
+require 'vendor/autoload.php;
+
+$app = boot();
+
+$initial_request = $app->initial_request;
+$request = $app->request;
+$dispatcher = $app->dispatcher;
+```
+
+
+
+
+## Event hooks
+
+The following event hooks are attached:
+
+- `ICanBoogie\Core::configure`: Used to define an instance of [ProvideDispatcher][] as dispatcher
+provider. This provider uses the `http_dispatchers` configuration to create the request dispatcher.
+
+
+
+
 
 ----------
 
@@ -86,5 +178,8 @@ The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 
 
 
+[AbstractDispatcherConstructor]: http://api.icanboogie.org/bind-http/2.6/class-ICanBoogie.Binding.HTTP.AbstractDispatcherConstructor.html
+[CoreBindings]:                  http://api.icanboogie.org/bind-http/2.6/class-ICanBoogie.Binding.HTTP.CoreBindings.html
+[ProvideDispatcher]:             http://api.icanboogie.org/bind-http/2.6/class-ICanBoogie.Binding.HTTP.ProvideDispatcher.html
 [ICanBoogie]:      https://github.com/ICanBoogie/ICanBoogie
 [icanboogie/http]: https://github.com/ICanBoogie/HTTP

@@ -85,7 +85,7 @@ class HooksTest extends \PHPUnit_Framework_TestCase
 				'pages' => [
 
 					DispatcherConfig::CONSTRUCTOR => 'Icybee\Modules\Pages\PageDispatcher',
-					DispatcherConfig::WEIGHT => 'bottom'
+					DispatcherConfig::WEIGHT => DispatcherConfig::WEIGHT_BOTTOM
 
 				]
 
@@ -102,7 +102,7 @@ class HooksTest extends \PHPUnit_Framework_TestCase
 				'operation' => [
 
 					DispatcherConfig::CONSTRUCTOR => 'ICanBoogie\Operation\OperationDispatcher',
-					DispatcherConfig::WEIGHT => 'before:routing'
+					DispatcherConfig::WEIGHT => DispatcherConfig::WEIGHT_BEFORE_PREFIX . 'routing'
 
 				]
 
@@ -117,21 +117,21 @@ class HooksTest extends \PHPUnit_Framework_TestCase
 			'operation' => [
 
 				DispatcherConfig::CONSTRUCTOR => 'ICanBoogie\Operation\OperationDispatcher',
-				DispatcherConfig::WEIGHT => 'before:routing'
+				DispatcherConfig::WEIGHT => DispatcherConfig::WEIGHT_BEFORE_PREFIX . 'routing'
 
 			],
 
 			'routing' => [
 
 				DispatcherConfig::CONSTRUCTOR => 'ICanBoogie\Routing\RouteDispatcher',
-				DispatcherConfig::WEIGHT => 0
+				DispatcherConfig::WEIGHT => DispatcherConfig::WEIGHT_DEFAULT
 
 			],
 
 			'pages' => [
 
 				DispatcherConfig::CONSTRUCTOR => 'Icybee\Modules\Pages\PageDispatcher',
-				DispatcherConfig::WEIGHT => 'bottom'
+				DispatcherConfig::WEIGHT => DispatcherConfig::WEIGHT_BOTTOM
 
 			]
 
