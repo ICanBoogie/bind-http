@@ -178,6 +178,7 @@ The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 
 
 
+[documentation]:                 http://api.icanboogie.org/bind-http/2.6/
 [AbstractDispatcherConstructor]: http://api.icanboogie.org/bind-http/2.6/class-ICanBoogie.Binding.HTTP.AbstractDispatcherConstructor.html
 [CoreBindings]:                  http://api.icanboogie.org/bind-http/2.6/class-ICanBoogie.Binding.HTTP.CoreBindings.html
 [ProvideDispatcher]:             http://api.icanboogie.org/bind-http/2.6/class-ICanBoogie.Binding.HTTP.ProvideDispatcher.html
