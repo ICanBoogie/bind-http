@@ -1,7 +1,7 @@
 # customization
 
 PACKAGE_NAME = icanboogie/bind-http
-PACKAGE_VERSION = 2.6.0
+PACKAGE_VERSION = 3.0.0
 
 # do not edit the following lines
 

@@ -17,6 +17,8 @@ use ICanBoogie\HTTP\Dispatcher;
 use ICanBoogie\HTTP\DispatcherProvider;
 use ICanBoogie\HTTP\Request;
 
+use function ICanBoogie\sort_by_weight;
+
 class Hooks
 {
 	/*
@@ -58,7 +60,7 @@ class Hooks
 		# Ordering
 		#
 
-		return \ICanBoogie\sort_by_weight($config, function($config) {
+		return sort_by_weight($config, function($config) {
 
 			return $config[DispatcherConfig::WEIGHT];
 

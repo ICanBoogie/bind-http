@@ -16,6 +16,8 @@ use ICanBoogie\HTTP\Dispatcher;
 use ICanBoogie\HTTP\DispatcherProvider;
 use ICanBoogie\HTTP\Request;
 
+use function ICanBoogie\app;
+
 class HooksTest extends \PHPUnit_Framework_TestCase
 {
 	/**
@@ -25,7 +27,7 @@ class HooksTest extends \PHPUnit_Framework_TestCase
 
 	static public function setUpBeforeClass()
 	{
-		self::$app = \ICanBoogie\app();
+		self::$app = app();
 	}
 
 	public function test_get_initial_request()

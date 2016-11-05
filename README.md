@@ -113,7 +113,7 @@ provider. This provider uses the `http_dispatchers` configuration to create the 
 
 ## Requirements
 
-The package requires PHP 5.5 or later.
+The package requires PHP 5.6 or later.
 
 
 
@@ -178,9 +178,9 @@ The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 
 
 
-[documentation]:                 http://api.icanboogie.org/bind-http/2.6/
-[AbstractDispatcherConstructor]: http://api.icanboogie.org/bind-http/2.6/class-ICanBoogie.Binding.HTTP.AbstractDispatcherConstructor.html
-[CoreBindings]:                  http://api.icanboogie.org/bind-http/2.6/class-ICanBoogie.Binding.HTTP.CoreBindings.html
-[ProvideDispatcher]:             http://api.icanboogie.org/bind-http/2.6/class-ICanBoogie.Binding.HTTP.ProvideDispatcher.html
+[documentation]:                 http://api.icanboogie.org/bind-http/3.0/
+[AbstractDispatcherConstructor]: http://api.icanboogie.org/bind-http/3.0/class-ICanBoogie.Binding.HTTP.AbstractDispatcherConstructor.html
+[CoreBindings]:                  http://api.icanboogie.org/bind-http/3.0/class-ICanBoogie.Binding.HTTP.CoreBindings.html
+[ProvideDispatcher]:             http://api.icanboogie.org/bind-http/3.0/class-ICanBoogie.Binding.HTTP.ProvideDispatcher.html
 [ICanBoogie]:                    https://github.com/ICanBoogie/ICanBoogie
 [icanboogie/http]:               https://github.com/ICanBoogie/HTTP
