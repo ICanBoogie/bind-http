@@ -11,7 +11,7 @@
 
 namespace ICanBoogie\Binding\HTTP;
 
-use ICanBoogie\Core;
+use ICanBoogie\Application;
 use ICanBoogie\HTTP\Dispatcher;
 
 /**
@@ -20,14 +20,14 @@ use ICanBoogie\HTTP\Dispatcher;
 abstract class AbstractDispatcherConstructor
 {
 	/**
-	 * @var Core
+	 * @var Application
 	 */
 	protected $app;
 
 	/**
-	 * @param Core $app
+	 * @param Application $app
 	 */
-	public function __construct(Core $app)
+	public function __construct(Application $app)
 	{
 		$this->app = $app;
 	}

@@ -17,8 +17,8 @@ $hooks = Hooks::class . '::';
 
 return [
 
-	ICanBoogie\Core::class . '::get_initial_request' => $hooks . 'core_get_initial_request',
-	ICanBoogie\Core::class . '::get_request' => $hooks . 'core_get_request',
-	ICanBoogie\Core::class . '::get_dispatcher' => $hooks . 'core_get_dispatcher'
+	ICanBoogie\Application::class . '::get_initial_request' => $hooks . 'app_get_initial_request',
+	ICanBoogie\Application::class . '::get_request' => $hooks . 'app_get_request',
+	ICanBoogie\Application::class . '::get_dispatcher' => $hooks . 'app_get_dispatcher'
 
 ];

@@ -11,7 +11,7 @@
 
 namespace ICanBoogie\Binding\HTTP;
 
-use ICanBoogie\Core;
+use ICanBoogie\Application;
 use ICanBoogie\HTTP\Dispatcher;
 use ICanBoogie\HTTP\DispatcherProvider;
 use ICanBoogie\HTTP\Request;
@@ -21,7 +21,7 @@ use function ICanBoogie\app;
 class HooksTest extends \PHPUnit_Framework_TestCase
 {
 	/**
-	 * @var Core|CoreBindings
+	 * @var Application
 	 */
 	static private $app;
 
@@ -32,7 +32,7 @@ class HooksTest extends \PHPUnit_Framework_TestCase
 
 	public function test_get_initial_request()
 	{
-		$initial_request = Hooks::core_get_initial_request();
+		$initial_request = Hooks::app_get_initial_request();
 
 		$this->assertInstanceOf(Request::class, $initial_request);
 		$this->assertSame($initial_request, self::$app->initial_request);
@@ -40,7 +40,7 @@ class HooksTest extends \PHPUnit_Framework_TestCase
 
 	public function test_get_request()
 	{
-		$request = Hooks::core_get_request(self::$app);
+		$request = Hooks::app_get_request(self::$app);
 
 		$this->assertInstanceOf(Request::class, $request);
 		$this->assertSame($request, self::$app->request);
@@ -48,7 +48,7 @@ class HooksTest extends \PHPUnit_Framework_TestCase
 
 	public function test_get_dispatcher()
 	{
-		$dispatcher = Hooks::core_get_dispatcher();
+		$dispatcher = Hooks::app_get_dispatcher();
 
 		$this->assertInstanceOf(Dispatcher::class, $dispatcher);
 		$this->assertSame($dispatcher, self::$app->dispatcher);
@@ -61,20 +61,20 @@ class HooksTest extends \PHPUnit_Framework_TestCase
 		$this->assertInstanceOf(ProvideDispatcher::class, $provider);
 
 		/**
-		 * @var $event Core\ConfigureEvent
+		 * @var $event Application\ConfigureEvent
 		 */
-		$event = $this->getMockBuilder(Core\ConfigureEvent::class)
+		$event = $this->getMockBuilder(Application\ConfigureEvent::class)
 			->disableOriginalConstructor()
 			->getMock();
 
-		Hooks::on_core_configure($event, self::$app);
+		Hooks::on_app_configure($event, self::$app);
 
 		$this->assertSame($provider, DispatcherProvider::defined());
 
 		#
 
 		DispatcherProvider::undefine();
-		Hooks::on_core_configure($event, self::$app);
+		Hooks::on_app_configure($event, self::$app);
 		$this->assertInstanceOf(ProvideDispatcher::class, DispatcherProvider::defined());
 	}
 

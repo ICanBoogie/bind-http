@@ -68,12 +68,12 @@ $config = $app->configs['http_dispatchers'];
 
 ## Prototype methods
 
-The following prototype methods are defined, the [CoreBindings][] trait may be used for type
+The following prototype methods are defined, the [ApplicationBindings][] trait may be used for type
 hinting:
 
-- `ICanBoogie\Core::get_initial_request`: Returns the initial request.
-- `ICanBoogie\Core::get_request`: Returns the current request.
-- `ICanBoogie\Core::get_dispatcher`: Returns the request dispatcher.
+- `ICanBoogie\Application::get_initial_request`: Returns the initial request.
+- `ICanBoogie\Application::get_request`: Returns the current request.
+- `ICanBoogie\Application::get_dispatcher`: Returns the request dispatcher.
 
 The following example demonstrates how this getters may be used:
 
@@ -98,8 +98,9 @@ $dispatcher = $app->dispatcher;
 
 The following event hooks are attached:
 
-- `ICanBoogie\Core::configure`: Used to define an instance of [ProvideDispatcher][] as dispatcher
-provider. This provider uses the `http_dispatchers` configuration to create the request dispatcher.
+- `ICanBoogie\Application::configure`: Used to define an instance of [ProvideDispatcher][] as
+dispatcher provider. This provider uses the `http_dispatchers` configuration to create the request
+dispatcher.
 
 
 
@@ -180,7 +181,7 @@ The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 
 [documentation]:                 http://api.icanboogie.org/bind-http/3.0/
 [AbstractDispatcherConstructor]: http://api.icanboogie.org/bind-http/3.0/class-ICanBoogie.Binding.HTTP.AbstractDispatcherConstructor.html
-[CoreBindings]:                  http://api.icanboogie.org/bind-http/3.0/class-ICanBoogie.Binding.HTTP.CoreBindings.html
+[ApplicationBindings]:           http://api.icanboogie.org/bind-http/3.0/class-ICanBoogie.Binding.HTTP.ApplicationBindings.html
 [ProvideDispatcher]:             http://api.icanboogie.org/bind-http/3.0/class-ICanBoogie.Binding.HTTP.ProvideDispatcher.html
 [ICanBoogie]:                    https://github.com/ICanBoogie/ICanBoogie
 [icanboogie/http]:               https://github.com/ICanBoogie/HTTP

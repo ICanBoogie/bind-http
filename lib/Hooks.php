@@ -11,7 +11,7 @@
 
 namespace ICanBoogie\Binding\HTTP;
 
-use ICanBoogie\Core;
+use ICanBoogie\Application;
 use ICanBoogie\HTTP;
 use ICanBoogie\HTTP\Dispatcher;
 use ICanBoogie\HTTP\DispatcherProvider;
@@ -76,7 +76,7 @@ class Hooks
 	 *
 	 * @return Request
 	 */
-	static public function core_get_initial_request()
+	static public function app_get_initial_request()
 	{
 		return HTTP\get_initial_request();
 	}
@@ -84,11 +84,11 @@ class Hooks
 	/**
 	 * Returns the current request.
 	 *
-	 * @param Core $app
+	 * @param Application $app
 	 *
 	 * @return Request
 	 */
-	static public function core_get_request(Core $app)
+	static public function app_get_request(Application $app)
 	{
 		return Request::get_current_request() ?: $app->initial_request;
 	}
@@ -98,7 +98,7 @@ class Hooks
 	 *
 	 * @return Dispatcher
 	 */
-	static public function core_get_dispatcher()
+	static public function app_get_dispatcher()
 	{
 		return HTTP\get_dispatcher();
 	}
@@ -110,10 +110,10 @@ class Hooks
 	/**
 	 * Defines the request dispatcher provider.
 	 *
-	 * @param Core\ConfigureEvent $event
-	 * @param Core $app
+	 * @param Application\ConfigureEvent $event
+	 * @param Application $app
 	 */
-	static public function on_core_configure(Core\ConfigureEvent $event, Core $app)
+	static public function on_app_configure(Application\ConfigureEvent $event, Application $app)
 	{
 		if (DispatcherProvider::defined())
 		{

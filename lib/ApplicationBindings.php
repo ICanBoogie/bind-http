@@ -19,11 +19,11 @@ use ICanBoogie\HTTP\Request;
  * @property-read Request $request The current request.
  * @property-read Dispatcher $dispatcher The request dispatcher.
  *
- * @see \ICanBoogie\Binding\HTTP\Hooks::core_get_initial_request()
- * @see \ICanBoogie\Binding\HTTP\Hooks::core_get_request()
- * @see \ICanBoogie\Binding\HTTP\Hooks::core_get_dispatcher()
+ * @see \ICanBoogie\Binding\HTTP\Hooks::app_get_initial_request()
+ * @see \ICanBoogie\Binding\HTTP\Hooks::app_get_request()
+ * @see \ICanBoogie\Binding\HTTP\Hooks::app_get_dispatcher()
  */
-trait CoreBindings
+trait ApplicationBindings
 {
 
 }

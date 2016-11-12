@@ -14,7 +14,7 @@ namespace ICanBoogie\Binding\HTTP;
 use ICanBoogie\Binding\HTTP\ProvideDispatcherTest\DummyDispatcher;
 use ICanBoogie\Binding\HTTP\ProvideDispatcherTest\DummyDispatcherConstructor;
 use ICanBoogie\Config;
-use ICanBoogie\Core;
+use ICanBoogie\Application;
 use ICanBoogie\HTTP\Dispatcher;
 
 class ProvideDispatcherTest extends \PHPUnit_Framework_TestCase
@@ -69,11 +69,11 @@ class ProvideDispatcherTest extends \PHPUnit_Framework_TestCase
 	/**
 	 * @param Config $configs
 	 *
-	 * @return Core
+	 * @return Application
 	 */
 	private function mockApp(Config $configs)
 	{
-		$app = $this->getMockBuilder(Core::class)
+		$app = $this->getMockBuilder(Application::class)
 			->disableOriginalConstructor()
 			->setMethods([ 'get_configs' ])
 			->getMock();

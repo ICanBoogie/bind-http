@@ -17,6 +17,6 @@ $hooks = Hooks::class . '::';
 
 return [
 
-	ICanBoogie\Core::class . '::configure' => $hooks . 'on_core_configure'
+	ICanBoogie\Application::class . '::configure' => $hooks . 'on_app_configure'
 
 ];
