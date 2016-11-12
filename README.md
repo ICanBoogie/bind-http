@@ -82,7 +82,7 @@ The following example demonstrates how this getters may be used:
 
 namespace ICanBoogie;
 
-require 'vendor/autoload.php;
+require 'vendor/autoload.php';
 
 $app = boot();
 
@@ -182,5 +182,5 @@ The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 [AbstractDispatcherConstructor]: http://api.icanboogie.org/bind-http/2.6/class-ICanBoogie.Binding.HTTP.AbstractDispatcherConstructor.html
 [CoreBindings]:                  http://api.icanboogie.org/bind-http/2.6/class-ICanBoogie.Binding.HTTP.CoreBindings.html
 [ProvideDispatcher]:             http://api.icanboogie.org/bind-http/2.6/class-ICanBoogie.Binding.HTTP.ProvideDispatcher.html
-[ICanBoogie]:      https://github.com/ICanBoogie/ICanBoogie
-[icanboogie/http]: https://github.com/ICanBoogie/HTTP
+[ICanBoogie]:                    https://github.com/ICanBoogie/ICanBoogie
+[icanboogie/http]:               https://github.com/ICanBoogie/HTTP
