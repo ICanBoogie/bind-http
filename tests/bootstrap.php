@@ -11,7 +11,6 @@
 
 namespace ICanBoogie;
 
-$autoload = require __DIR__ . '/../vendor/autoload.php';
-$autoload->addPsr4("ICanBoogie\\Binding\\HTTP\\", __DIR__);
+require __DIR__ . '/../vendor/autoload.php';
 
 boot();
