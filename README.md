@@ -1,10 +1,9 @@
 # bind-http
 
 [![Release](https://img.shields.io/packagist/v/icanboogie/bind-http.svg)](https://packagist.org/packages/icanboogie/bind-http)
-[![Build Status](https://img.shields.io/travis/ICanBoogie/bind-http/master.svg)](http://travis-ci.org/ICanBoogie/bind-http)
-[![HHVM](https://img.shields.io/hhvm/icanboogie/bind-http.svg)](http://hhvm.h4cc.de/package/icanboogie/bind-http)
-[![Code Quality](https://img.shields.io/scrutinizer/g/ICanBoogie/bind-http/master.svg)](https://scrutinizer-ci.com/g/ICanBoogie/bind-http)
-[![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-http/master.svg)](https://coveralls.io/r/ICanBoogie/bind-http)
+[![Build Status](https://img.shields.io/travis/ICanBoogie/bind-http.svg)](http://travis-ci.org/ICanBoogie/bind-http)
+[![Code Quality](https://img.shields.io/scrutinizer/g/ICanBoogie/bind-http.svg)](https://scrutinizer-ci.com/g/ICanBoogie/bind-http)
+[![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-http.svg)](https://coveralls.io/r/ICanBoogie/bind-http)
 [![Packagist](https://img.shields.io/packagist/dt/icanboogie/bind-http.svg)](https://packagist.org/packages/icanboogie/bind-http)
 
 The **icanboogie/bind-http** package binds [icanboogie/http][] to [ICanBoogie][].
@@ -164,8 +163,8 @@ clean` command.
 
 The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 
-[![Build Status](https://img.shields.io/travis/ICanBoogie/bind-http/master.svg)](http://travis-ci.org/ICanBoogie/bind-http)
-[![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-http/master.svg)](https://coveralls.io/r/ICanBoogie/bind-http)
+[![Build Status](https://img.shields.io/travis/ICanBoogie/bind-http.svg)](http://travis-ci.org/ICanBoogie/bind-http)
+[![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-http.svg)](https://coveralls.io/r/ICanBoogie/bind-http)
 
 
 
@@ -179,9 +178,9 @@ The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 
 
 
-[documentation]:                 http://api.icanboogie.org/bind-http/3.0/
-[AbstractDispatcherConstructor]: http://api.icanboogie.org/bind-http/3.0/class-ICanBoogie.Binding.HTTP.AbstractDispatcherConstructor.html
-[ApplicationBindings]:           http://api.icanboogie.org/bind-http/3.0/class-ICanBoogie.Binding.HTTP.ApplicationBindings.html
-[ProvideDispatcher]:             http://api.icanboogie.org/bind-http/3.0/class-ICanBoogie.Binding.HTTP.ProvideDispatcher.html
-[ICanBoogie]:                    https://github.com/ICanBoogie/ICanBoogie
+[documentation]:                 https://icanboogie.org/api/bind-http/3.0/
+[AbstractDispatcherConstructor]: https://icanboogie.org/api/bind-http/3.0/class-ICanBoogie.Binding.HTTP.AbstractDispatcherConstructor.html
+[ApplicationBindings]:           https://icanboogie.org/api/bind-http/3.0/class-ICanBoogie.Binding.HTTP.ApplicationBindings.html
+[ProvideDispatcher]:             https://icanboogie.org/api/bind-http/3.0/class-ICanBoogie.Binding.HTTP.ProvideDispatcher.html
+[ICanBoogie]:                    https://icanboogie.org/
 [icanboogie/http]:               https://github.com/ICanBoogie/HTTP
