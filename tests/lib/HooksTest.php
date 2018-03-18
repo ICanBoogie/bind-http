@@ -18,7 +18,7 @@ use ICanBoogie\HTTP\Request;
 
 use function ICanBoogie\app;
 
-class HooksTest extends \PHPUnit_Framework_TestCase
+class HooksTest extends \PHPUnit\Framework\TestCase
 {
 	/**
 	 * @var Application

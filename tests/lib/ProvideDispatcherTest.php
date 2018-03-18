@@ -17,7 +17,7 @@ use ICanBoogie\Config;
 use ICanBoogie\Application;
 use ICanBoogie\HTTP\Dispatcher;
 
-class ProvideDispatcherTest extends \PHPUnit_Framework_TestCase
+class ProvideDispatcherTest extends \PHPUnit\Framework\TestCase
 {
 	static public function create_dummy_dispatcher()
 	{

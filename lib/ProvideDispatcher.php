@@ -36,7 +36,7 @@ class ProvideDispatcher extends \ICanBoogie\HTTP\ProvideDispatcher
 	/**
 	 * @inheritdoc
 	 */
-	protected function create()
+	protected function create(): RequestDispatcher
 	{
 		$config = $this->app->configs['http_dispatchers'];
 		$dispatcher = $config ? $this->resolve_dispatchers($config) : [];
@@ -49,7 +49,7 @@ class ProvideDispatcher extends \ICanBoogie\HTTP\ProvideDispatcher
 	 *
 	 * @return Dispatcher[]
 	 */
-	protected function resolve_dispatchers(array $config)
+	private function resolve_dispatchers(array $config): array
 	{
 		$dispatchers = [];
 
@@ -67,16 +67,16 @@ class ProvideDispatcher extends \ICanBoogie\HTTP\ProvideDispatcher
 	 *
 	 * @return AbstractDispatcherConstructor|callable
 	 */
-	protected function resolve_constructor($constructor)
+	private function resolve_constructor(string $constructor): callable
 	{
-		if (class_exists($constructor))
+		if (\class_exists($constructor))
 		{
 			return new $constructor($this->app);
 		}
 
 		return function($dispatcher_config) use ($constructor) {
 
-			return call_user_func($constructor, $dispatcher_config);
+			return $constructor($dispatcher_config);
 
 		};
 	}

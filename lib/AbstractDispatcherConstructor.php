@@ -37,5 +37,5 @@ abstract class AbstractDispatcherConstructor
 	 *
 	 * @return Dispatcher
 	 */
-	abstract public function __invoke(array $config);
+	abstract public function __invoke(array $config): Dispatcher;
 }

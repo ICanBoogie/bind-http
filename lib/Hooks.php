@@ -25,7 +25,7 @@ class Hooks
 	 * Autoconfig
 	 */
 
-	static public function synthesize_dispatchers_config(array $fragments)
+	static public function synthesize_dispatchers_config(array $fragments): array
 	{
 		$config_array = [];
 
@@ -39,15 +39,15 @@ class Hooks
 			$config_array[] = $fragment['dispatchers'];
 		}
 
-		$config = call_user_func_array('array_merge', $config_array);
+		$config = \array_merge(...$config_array);
 
 		#
 		# Normalizing
 		#
 
-		array_walk($config, function(&$config) {
+		\array_walk($config, function(&$config): void {
 
-			if (is_string($config))
+			if (\is_string($config))
 			{
 				$config = [ DispatcherConfig::CONSTRUCTOR => $config, ];
 			}
@@ -76,7 +76,7 @@ class Hooks
 	 *
 	 * @return Request
 	 */
-	static public function app_get_initial_request()
+	static public function app_get_initial_request(): Request
 	{
 		return HTTP\get_initial_request();
 	}
@@ -88,7 +88,7 @@ class Hooks
 	 *
 	 * @return Request
 	 */
-	static public function app_get_request(Application $app)
+	static public function app_get_request(Application $app): Request
 	{
 		return Request::get_current_request() ?: $app->initial_request;
 	}
@@ -98,7 +98,7 @@ class Hooks
 	 *
 	 * @return Dispatcher
 	 */
-	static public function app_get_dispatcher()
+	static public function app_get_dispatcher(): Dispatcher
 	{
 		return HTTP\get_dispatcher();
 	}
@@ -113,7 +113,7 @@ class Hooks
 	 * @param Application\ConfigureEvent $event
 	 * @param Application $app
 	 */
-	static public function on_app_configure(Application\ConfigureEvent $event, Application $app)
+	static public function on_app_configure(Application\ConfigureEvent $event, Application $app): void
 	{
 		if (DispatcherProvider::defined())
 		{
