@@ -1,7 +1,7 @@
 # bind-http
 
 [![Release](https://img.shields.io/packagist/v/icanboogie/bind-http.svg)](https://packagist.org/packages/icanboogie/bind-http)
-[![Build Status](https://img.shields.io/travis/ICanBoogie/bind-http.svg)](http://travis-ci.org/ICanBoogie/bind-http)
+[![Build Status](https://img.shields.io/github/workflow/status/ICanBoogie/bind-http/test)](https://github.com/ICanBoogie/bind-http/actions?query=workflow%3Atest)
 [![Code Quality](https://img.shields.io/scrutinizer/g/ICanBoogie/bind-http.svg)](https://scrutinizer-ci.com/g/ICanBoogie/bind-http)
 [![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-http.svg)](https://coveralls.io/r/ICanBoogie/bind-http)
 [![Packagist](https://img.shields.io/packagist/dt/icanboogie/bind-http.svg)](https://packagist.org/packages/icanboogie/bind-http)
@@ -28,25 +28,25 @@ use ICanBoogie\Binding\HTTP\DispatcherConfig as Config;
 
 return [
 
-	'dispatchers' => [
+    'dispatchers' => [
 
-		'pages' => [
+        'pages' => [
 
-			Config::CONSTRUCTOR => \Icybee\Modules\Pages\PageDispatcher::class,
-			Config::WEIGHT => Config::WEIGHT_BOTTOM
+            Config::CONSTRUCTOR => \Icybee\Modules\Pages\PageDispatcher::class,
+            Config::WEIGHT => Config::WEIGHT_BOTTOM
 
-		],
+        ],
 
-		'routing' => \ICanBoogie\Routing\RouteDispatcher::class,
+        'routing' => \ICanBoogie\Routing\RouteDispatcher::class,
 
-		'operation' => [
+        'operation' => [
 
-			Config::CONSTRUCTOR => \ICanBoogie\Operation\OperationDispatcher::class,
-			Config::WEIGHT => Config::WEIGHT_BEFORE_PREFIX . 'routing'
+            Config::CONSTRUCTOR => \ICanBoogie\Operation\OperationDispatcher::class,
+            Config::WEIGHT => Config::WEIGHT_BEFORE_PREFIX . 'routing'
 
-		]
+        ]
 
-	]
+    ]
 
 ];
 ```
