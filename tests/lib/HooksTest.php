@@ -15,17 +15,18 @@ use ICanBoogie\Application;
 use ICanBoogie\HTTP\Dispatcher;
 use ICanBoogie\HTTP\DispatcherProvider;
 use ICanBoogie\HTTP\Request;
+use PHPUnit\Framework\TestCase;
 
 use function ICanBoogie\app;
 
-class HooksTest extends \PHPUnit\Framework\TestCase
+class HooksTest extends TestCase
 {
 	/**
 	 * @var Application
 	 */
 	static private $app;
 
-	static public function setUpBeforeClass()
+	static public function setUpBeforeClass(): void
 	{
 		self::$app = app();
 	}
@@ -63,9 +64,7 @@ class HooksTest extends \PHPUnit\Framework\TestCase
 		/**
 		 * @var $event Application\ConfigureEvent
 		 */
-		$event = $this->getMockBuilder(Application\ConfigureEvent::class)
-			->disableOriginalConstructor()
-			->getMock();
+		$event = Application\ConfigureEvent::from([ 'target' => self::$app ]);
 
 		Hooks::on_app_configure($event, self::$app);
 
