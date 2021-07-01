@@ -14,20 +14,15 @@ namespace ICanBoogie\Binding\HTTP;
 use ICanBoogie\Application;
 use ICanBoogie\HTTP\Dispatcher;
 use ICanBoogie\HTTP\RequestDispatcher;
+use function class_exists;
 
 /**
  * @inheritdoc
  */
 class ProvideDispatcher extends \ICanBoogie\HTTP\ProvideDispatcher
 {
-	/**
-	 * @var Application
-	 */
-	private $app;
+	private Application $app;
 
-	/**
-	 * @param Application $app
-	 */
 	public function __construct(Application $app)
 	{
 		$this->app = $app;
@@ -45,7 +40,7 @@ class ProvideDispatcher extends \ICanBoogie\HTTP\ProvideDispatcher
 	}
 
 	/**
-	 * @param array $config
+	 * @param array<string, array> $config
 	 *
 	 * @return Dispatcher[]
 	 */
@@ -63,13 +58,11 @@ class ProvideDispatcher extends \ICanBoogie\HTTP\ProvideDispatcher
 	}
 
 	/**
-	 * @param string $constructor
-	 *
 	 * @return AbstractDispatcherConstructor|callable
 	 */
 	private function resolve_constructor(string $constructor): callable
 	{
-		if (\class_exists($constructor))
+		if (class_exists($constructor))
 		{
 			return new $constructor($this->app);
 		}

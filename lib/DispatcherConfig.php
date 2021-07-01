@@ -13,11 +13,11 @@ namespace ICanBoogie\Binding\HTTP;
 
 interface DispatcherConfig
 {
-	const CONSTRUCTOR = 'constructor';
-	const WEIGHT = 'weight';
-	const WEIGHT_TOP = 'top';
-	const WEIGHT_BOTTOM = 'bottom';
-	const WEIGHT_BEFORE_PREFIX = 'before:';
-	const WEIGHT_AFTER_PREFIX = 'after:';
-	const WEIGHT_DEFAULT = 0;
+	public const CONSTRUCTOR = 'constructor';
+	public const WEIGHT = 'weight';
+	public const WEIGHT_TOP = 'top';
+	public const WEIGHT_BOTTOM = 'bottom';
+	public const WEIGHT_BEFORE_PREFIX = 'before:';
+	public const WEIGHT_AFTER_PREFIX = 'after:';
+	public const WEIGHT_DEFAULT = 0;
 }

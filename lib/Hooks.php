@@ -17,9 +17,12 @@ use ICanBoogie\HTTP\Dispatcher;
 use ICanBoogie\HTTP\DispatcherProvider;
 use ICanBoogie\HTTP\Request;
 
+use function array_merge;
+use function array_walk;
 use function ICanBoogie\sort_by_weight;
+use function is_string;
 
-class Hooks
+final class Hooks
 {
 	/*
 	 * Autoconfig
@@ -31,23 +34,18 @@ class Hooks
 
 		foreach ($fragments as $fragment)
 		{
-			if (empty($fragment['dispatchers']))
-			{
-				continue;
-			}
-
-			$config_array[] = $fragment['dispatchers'];
+			$config_array[] = $fragment['dispatchers'] ?? [];
 		}
 
-		$config = \array_merge(...$config_array);
+		$config = array_merge(...$config_array);
 
 		#
 		# Normalizing
 		#
 
-		\array_walk($config, function(&$config): void {
+		array_walk($config, function(&$config): void {
 
-			if (\is_string($config))
+			if (is_string($config))
 			{
 				$config = [ DispatcherConfig::CONSTRUCTOR => $config, ];
 			}
@@ -83,10 +81,6 @@ class Hooks
 
 	/**
 	 * Returns the current request.
-	 *
-	 * @param Application $app
-	 *
-	 * @return Request
 	 */
 	static public function app_get_request(Application $app): Request
 	{
@@ -95,8 +89,6 @@ class Hooks
 
 	/**
 	 * Returns the request dispatcher.
-	 *
-	 * @return Dispatcher
 	 */
 	static public function app_get_dispatcher(): Dispatcher
 	{
@@ -109,9 +101,6 @@ class Hooks
 
 	/**
 	 * Defines the request dispatcher provider.
-	 *
-	 * @param Application\ConfigureEvent $event
-	 * @param Application $app
 	 */
 	static public function on_app_configure(Application\ConfigureEvent $event, Application $app): void
 	{
