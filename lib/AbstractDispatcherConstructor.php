@@ -16,6 +16,8 @@ use ICanBoogie\HTTP\Dispatcher;
 
 /**
  * Abstract dispatcher constructor.
+ *
+ * @deprecated
  */
 abstract class AbstractDispatcherConstructor
 {

@@ -49,6 +49,8 @@ class HooksTest extends TestCase
 
 	public function test_get_dispatcher()
 	{
+		$this->markTestSkipped("OBSOLETE: TO REMOVE");
+
 		$dispatcher = Hooks::app_get_dispatcher();
 
 		$this->assertInstanceOf(Dispatcher::class, $dispatcher);
@@ -57,6 +59,8 @@ class HooksTest extends TestCase
 
 	public function test_dispatcher_provider()
 	{
+		$this->markTestSkipped("OBSOLETE: TO REMOVE");
+
 		$provider = DispatcherProvider::defined();
 
 		$this->assertInstanceOf(ProvideDispatcher::class, $provider);
@@ -79,6 +83,8 @@ class HooksTest extends TestCase
 
 	public function test_synthesize_dispatchers_config()
 	{
+		$this->markTestSkipped("OBSOLETE: TO REMOVE");
+
 		$config = Hooks::synthesize_dispatchers_config([
 
 			[ 'dispatchers' => [

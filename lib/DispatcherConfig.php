@@ -11,6 +11,9 @@
 
 namespace ICanBoogie\Binding\HTTP;
 
+/**
+ * @deprecated
+ */
 interface DispatcherConfig
 {
 	public const CONSTRUCTOR = 'constructor';

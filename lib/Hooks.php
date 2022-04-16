@@ -21,6 +21,7 @@ use function array_merge;
 use function array_walk;
 use function ICanBoogie\sort_by_weight;
 use function is_string;
+use function trigger_error;
 
 final class Hooks
 {
@@ -30,6 +31,8 @@ final class Hooks
 
 	static public function synthesize_dispatchers_config(array $fragments): array
 	{
+		trigger_error("OBSOLETE: Use the responder instead.");
+
 		$config_array = [];
 
 		foreach ($fragments as $fragment)
@@ -92,6 +95,8 @@ final class Hooks
 	 */
 	static public function app_get_dispatcher(): Dispatcher
 	{
+		trigger_error("OBSOLETE: Use the responder instead.");
+
 		return HTTP\get_dispatcher();
 	}
 
@@ -104,6 +109,8 @@ final class Hooks
 	 */
 	static public function on_app_configure(Application\ConfigureEvent $event, Application $app): void
 	{
+		trigger_error("OBSOLETE: Use the responder instead.");
+
 		if (DispatcherProvider::defined())
 		{
 			return;

@@ -1,0 +1,14 @@
+services:
+  _defaults:
+    autowire: true
+
+  ICanBoogie\HTTP\Responder:
+    class: ICanBoogie\HTTP\Responder\WithProvider
+    public: true
+
+  ICanBoogie\HTTP\ResponderProvider\Chain:
+    arguments:
+      $chain: !tagged_iterator { tag: request_responder }
+
+  ICanBoogie\HTTP\ResponderProvider:
+    alias: ICanBoogie\HTTP\ResponderProvider\Chain

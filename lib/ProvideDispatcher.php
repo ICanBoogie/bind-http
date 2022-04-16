@@ -18,6 +18,8 @@ use function class_exists;
 
 /**
  * @inheritdoc
+ *
+ * @deprecated
  */
 class ProvideDispatcher extends \ICanBoogie\HTTP\ProvideDispatcher
 {

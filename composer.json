@@ -24,7 +24,7 @@
 	"prefer-stable": true,
 	"prefer-dist": true,
 	"require": {
-		"php": ">=8.0",
+		"php": ">=8.1",
 		"icanboogie/icanboogie": "^6.0",
 		"icanboogie/http": "^6.0"
 	},
