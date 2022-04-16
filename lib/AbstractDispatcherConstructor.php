@@ -19,14 +19,8 @@ use ICanBoogie\HTTP\Dispatcher;
  */
 abstract class AbstractDispatcherConstructor
 {
-	/**
-	 * @var Application
-	 */
-	protected $app;
+	protected Application $app;
 
-	/**
-	 * @param Application $app
-	 */
 	public function __construct(Application $app)
 	{
 		$this->app = $app;
@@ -34,8 +28,6 @@ abstract class AbstractDispatcherConstructor
 
 	/**
 	 * @param array $config
-	 *
-	 * @return Dispatcher
 	 */
 	abstract public function __invoke(array $config): Dispatcher;
 }
