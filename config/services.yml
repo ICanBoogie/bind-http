@@ -10,5 +10,8 @@ services:
     arguments:
       $chain: !tagged_iterator { tag: request_responder }
 
+  ICanBoogie\HTTP\Responder\WithRecovery:
+    decorates: ICanBoogie\HTTP\Responder
+
   ICanBoogie\HTTP\ResponderProvider:
     alias: ICanBoogie\HTTP\ResponderProvider\Chain
