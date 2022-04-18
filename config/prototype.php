@@ -11,13 +11,11 @@
 
 namespace ICanBoogie\Binding\HTTP;
 
-use ICanBoogie;
-
-$hooks = Hooks::class . '::';
+use ICanBoogie\Application;
 
 return [
 
-	ICanBoogie\Application::class . '::get_initial_request' => $hooks . 'app_get_initial_request',
-	ICanBoogie\Application::class . '::get_request' => $hooks . 'app_get_request',
+	Application::class . '::get_initial_request' => [ Hooks::class, 'app_get_initial_request' ],
+	Application::class . '::get_request' => [ Hooks::class, 'app_get_request' ],
 
 ];
