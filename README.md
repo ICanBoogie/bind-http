@@ -40,15 +40,6 @@ $request = $app->request;
 
 
 
-## Documentation
-
-The package is documented as part of the [ICanBoogie][] framework [documentation][]. You can
-generate the documentation for the package and its dependencies with the `make doc` command. The
-documentation is generated in the `build/docs` directory. [ApiGen](http://apigen.org/) is required.
-The directory can later be cleaned with the `make clean` command.
-
-
-
 ## Testing
 
 Run `make test-container` to create and log into the test container, then run `make test` to run the
@@ -63,7 +54,6 @@ test suite. Alternatively, run `make test-coverage` to run the test suite with t
 
 
 
-[documentation]:                 https://icanboogie.org/api/bind-http/3.0/
-[ApplicationBindings]:           https://icanboogie.org/api/bind-http/3.0/class-ICanBoogie.Binding.HTTP.ApplicationBindings.html
+[ApplicationBindings]:           lib/ApplicationBindings.php
 [ICanBoogie]:                    https://icanboogie.org/
 [icanboogie/http]:               https://github.com/ICanBoogie/HTTP

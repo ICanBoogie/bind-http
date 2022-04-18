@@ -11,17 +11,14 @@
 
 namespace ICanBoogie\Binding\HTTP;
 
-use ICanBoogie\HTTP\Dispatcher;
 use ICanBoogie\HTTP\Request;
 
 /**
  * @property-read Request $initial_request The initial request.
  * @property-read Request $request The current request.
- * @property-read Dispatcher $dispatcher {@deprecated} The request dispatcher.
  *
  * @see \ICanBoogie\Binding\HTTP\Hooks::app_get_initial_request()
  * @see \ICanBoogie\Binding\HTTP\Hooks::app_get_request()
- * @see \ICanBoogie\Binding\HTTP\Hooks::app_get_dispatcher() {@deprecated}
  */
 trait ApplicationBindings
 {

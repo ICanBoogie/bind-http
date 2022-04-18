@@ -19,6 +19,5 @@ return [
 
 	ICanBoogie\Application::class . '::get_initial_request' => $hooks . 'app_get_initial_request',
 	ICanBoogie\Application::class . '::get_request' => $hooks . 'app_get_request',
-	ICanBoogie\Application::class . '::get_dispatcher' => $hooks . 'app_get_dispatcher'
 
 ];
