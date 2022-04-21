@@ -9,8 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace ICanBoogie\Binding\HTTP;
+namespace Test\ICanBoogie\Binding\HTTP;
 
+use ICanBoogie\Binding\HTTP\Hooks;
 use ICanBoogie\HTTP\Request;
 use PHPUnit\Framework\TestCase;
 

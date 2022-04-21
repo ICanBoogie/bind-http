@@ -9,19 +9,20 @@
  * file that was distributed with this source code.
  */
 
-namespace ICanBoogie\Binding\HTTP;
+namespace Test\ICanBoogie\Binding\HTTP;
 
 use ICanBoogie\HTTP\Responder;
 use PHPUnit\Framework\TestCase;
 
 use function ICanBoogie\app;
 
-final class ServicesTest extends TestCase
+final class ContainerTest extends TestCase
 {
 	public function test_responder(): void
 	{
 		$responder = app()->container->get(Responder::class);
 
 		$this->assertInstanceOf(Responder::class, $responder);
+		$this->assertInstanceOf(Responder\WithRecovery::class, $responder);
 	}
 }

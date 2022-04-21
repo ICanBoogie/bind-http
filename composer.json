@@ -38,7 +38,7 @@
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"ICanBoogie\\Binding\\HTTP\\": "tests/lib/"
+			"Test\\ICanBoogie\\Binding\\HTTP\\": "tests/lib"
 		}
 	},
 	"extra": {
