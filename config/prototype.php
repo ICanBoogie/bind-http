@@ -12,10 +12,8 @@
 namespace ICanBoogie\Binding\HTTP;
 
 use ICanBoogie\Application;
+use ICanBoogie\Binding\Prototype\ConfigBuilder;
 
-return [
-
-	Application::class . '::get_initial_request' => [ Hooks::class, 'app_get_initial_request' ],
-	Application::class . '::get_request' => [ Hooks::class, 'app_get_request' ],
-
-];
+return fn(ConfigBuilder $config) => $config
+	->bind(Application::class, 'get_initial_request', [ Hooks::class, 'app_get_initial_request' ])
+	->bind(Application::class, 'get_request', [ Hooks::class, 'app_get_request' ]);
