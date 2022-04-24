@@ -3,10 +3,10 @@ services:
     autowire: true
 
   ICanBoogie\HTTP\Responder:
-    alias: ICanBoogie\HTTP\Responder\WithProvider
+    alias: ICanBoogie\HTTP\Responder\DelegateToProvider
     public: true
 
-  ICanBoogie\HTTP\Responder\WithProvider: ~
+  ICanBoogie\HTTP\Responder\DelegateToProvider: ~
 
   ICanBoogie\HTTP\Responder\WithEvent:
     decorates: ICanBoogie\HTTP\Responder

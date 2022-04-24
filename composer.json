@@ -43,10 +43,7 @@
 	},
 	"extra": {
 		"icanboogie": {
-			"config-path": "config",
-			"config-constructor": {
-				"http_dispatchers": "ICanBoogie\\Binding\\HTTP\\Hooks::synthesize_dispatchers_config#http"
-			}
+			"config-path": "config"
 		}
 	},
 	"scripts": {

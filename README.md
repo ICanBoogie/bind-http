@@ -10,32 +10,6 @@ The **icanboogie/bind-http** package binds [icanboogie/http][] to [ICanBoogie][]
 
 
 
-## Prototype methods
-
-The following prototype methods are defined, the [ApplicationBindings][] trait may be used for type
-hinting:
-
-- `ICanBoogie\Application::get_initial_request`: Returns the initial request.
-- `ICanBoogie\Application::get_request`: Returns the current request.
-
-The following example demonstrates how this getters may be used:
-
-```php
-<?php
-
-namespace ICanBoogie;
-
-require 'vendor/autoload.php';
-
-$app = boot();
-
-$initial_request = $app->initial_request;
-$request = $app->request;
-```
-
-
-
-
 ----------
 
 
@@ -54,6 +28,5 @@ test suite. Alternatively, run `make test-coverage` to run the test suite with t
 
 
 
-[ApplicationBindings]:           lib/ApplicationBindings.php
 [ICanBoogie]:                    https://icanboogie.org/
 [icanboogie/http]:               https://github.com/ICanBoogie/HTTP
