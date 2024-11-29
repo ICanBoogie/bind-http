@@ -4,7 +4,7 @@
 	"description": "Binds icanboogie/http to ICanBoogie",
 	"homepage": "https://icanboogie.org/",
 	"license": "MIT",
-	"version": "6.0",
+	"version": "7.0",
 	"authors": [
 		{
 			"name": "Olivier Laviale",
@@ -26,9 +26,9 @@
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"require": {
-		"php": ">=8.2",
-		"icanboogie/icanboogie": "^6.0",
-		"icanboogie/http": "^6.0"
+		"php": ">=8.4",
+		"icanboogie/icanboogie": "^7.0",
+		"icanboogie/http": "^7.0"
 	},
 	"require-dev": {
 		"phpstan/phpstan": "^2.0",
