@@ -1,26 +1,19 @@
 # customization
 
-PACKAGE_NAME = icanboogie/bind-http
 PHPUNIT = vendor/bin/phpunit
 
 # do not edit the following lines
 
-.PHONY: usage
-usage:
-	@echo "test:  Runs the test suite.\ndoc:   Creates the documentation.\nclean: Removes the documentation, the dependencies and the Composer files."
-
 vendor:
 	@composer install
 
-.PHONY: update
-update:
-	@composer update
+# testing
 
 test-dependencies: vendor
 
 .PHONY: test
 test: test-dependencies
-	@$(PHPUNIT)
+	@$(PHPUNIT) $(ARGS)
 
 .PHONY: test-coverage
 test-coverage: test-dependencies
@@ -33,21 +26,19 @@ test-coveralls: test-dependencies
 	@$(PHPUNIT) --coverage-clover ../build/logs/clover.xml
 
 .PHONY: test-container
-test-container:
-	@-docker-compose run --rm app bash
-	@docker-compose down -v
+test-container: test-container-82
 
-.PHONY: doc
-doc: vendor
-	@mkdir -p build/docs
-	@apigen generate \
-	--source lib \
-	--destination build/docs/ \
-	--title "$(PACKAGE_NAME)" \
-	--template-theme "bootstrap"
+.PHONY: test-container-82
+test-container-82:
+	@-docker compose run --rm app82 bash
+	@docker compose down -v
 
-.PHONY: clean
-clean:
-	@rm -fR build
-	@rm -fR vendor
-	@rm -f composer.lock
+.PHONY: test-container-84
+test-container-84:
+	@-docker compose run --rm app84 bash
+	@docker compose down -v
+
+.PHONY: lint
+lint:
+	@XDEBUG_MODE=off phpcs -s
+	@XDEBUG_MODE=off vendor/bin/phpstan

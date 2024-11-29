@@ -18,11 +18,11 @@ use function ICanBoogie\app;
 
 final class ContainerTest extends TestCase
 {
-	public function test_responder(): void
-	{
-		$responder = app()->container->get(Responder::class);
+    public function test_responder(): void
+    {
+        $responder = app()->container->get(Responder::class);
 
-		$this->assertInstanceOf(Responder::class, $responder);
-		$this->assertInstanceOf(Responder\WithRecovery::class, $responder);
-	}
+        $this->assertInstanceOf(Responder::class, $responder);
+        $this->assertInstanceOf(Responder\WithRecovery::class, $responder);
+    }
 }

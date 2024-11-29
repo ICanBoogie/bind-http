@@ -1,30 +1,44 @@
 # bind-http
 
-[![Release](https://img.shields.io/packagist/v/icanboogie/bind-http.svg)](https://packagist.org/packages/icanboogie/bind-http)
-[![Build Status](https://img.shields.io/github/workflow/status/ICanBoogie/bind-http/test)](https://github.com/ICanBoogie/bind-http/actions?query=workflow%3Atest)
-[![Code Quality](https://img.shields.io/scrutinizer/g/ICanBoogie/bind-http.svg)](https://scrutinizer-ci.com/g/ICanBoogie/bind-http)
-[![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-http.svg)](https://coveralls.io/r/ICanBoogie/bind-http)
-[![Packagist](https://img.shields.io/packagist/dt/icanboogie/bind-http.svg)](https://packagist.org/packages/icanboogie/bind-http)
+[![Release](https://img.shields.io/packagist/v/icanboogie/bin-http.svg)](https://packagist.org/packages/icanboogie/bin-http)
+[![Code Coverage](https://coveralls.io/repos/github/ICanBoogie/bin-http/badge.svg?branch=6.0)](https://coveralls.io/r/ICanBoogie/bin-http?branch=6.0)
+[![Downloads](https://img.shields.io/packagist/dt/icanboogie/bin-http.svg)](https://packagist.org/packages/icanboogie/bin-http)
 
 The **icanboogie/bind-http** package binds [icanboogie/http][] to [ICanBoogie][].
 
+
+
+#### Installation
+
+```shell
+composer require icanboogie/bind-http
+```
 
 
 ----------
 
 
 
-## Testing
+## Continuous Integration
 
-Run `make test-container` to create and log into the test container, then run `make test` to run the
-test suite. Alternatively, run `make test-coverage` to run the test suite with test coverage. Open
-`build/coverage/index.html` to see the breakdown of the code coverage.
+The project is continuously tested by [GitHub actions](https://github.com/ICanBoogie/bin-http/actions).
+
+[![Tests](https://github.com/ICanBoogie/bin-http/actions/workflows/test.yml/badge.svg?branch=6.0)](https://github.com/ICanBoogie/bin-http/actions/workflows/test.yml)
+[![Static Analysis](https://github.com/ICanBoogie/bin-http/actions/workflows/static-analysis.yml/badge.svg?branch=6.0)](https://github.com/ICanBoogie/bin-http/actions/workflows/static-analysis.yml)
+[![Code Style](https://github.com/ICanBoogie/bin-http/actions/workflows/code-style.yml/badge.svg?branch=6.0)](https://github.com/ICanBoogie/bin-http/actions/workflows/code-style.yml)
 
 
 
-## License
+## Code of Conduct
 
-**icanboogie/bind-http** is released under the [New BSD License](LICENSE).
+This project adheres to a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in
+this project and its community, you're expected to uphold this code.
+
+
+
+## Contributing
+
+See [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 
 
