@@ -1,8 +1,7 @@
 # bind-http
 
-[![Release](https://img.shields.io/packagist/v/icanboogie/bin-http.svg)](https://packagist.org/packages/icanboogie/bin-http)
-[![Code Coverage](https://coveralls.io/repos/github/ICanBoogie/bin-http/badge.svg?branch=6.0)](https://coveralls.io/r/ICanBoogie/bin-http?branch=6.0)
-[![Downloads](https://img.shields.io/packagist/dt/icanboogie/bin-http.svg)](https://packagist.org/packages/icanboogie/bin-http)
+[![Release](https://img.shields.io/packagist/v/icanboogie/bind-http.svg)](https://packagist.org/packages/icanboogie/bind-http)
+[![Downloads](https://img.shields.io/packagist/dt/icanboogie/bind-http.svg)](https://packagist.org/packages/icanboogie/bind-http)
 
 The **icanboogie/bind-http** package binds [icanboogie/http][] to [ICanBoogie][].
 
@@ -21,11 +20,11 @@ composer require icanboogie/bind-http
 
 ## Continuous Integration
 
-The project is continuously tested by [GitHub actions](https://github.com/ICanBoogie/bin-http/actions).
+The project is continuously tested by [GitHub actions](https://github.com/ICanBoogie/bind-http/actions).
 
-[![Tests](https://github.com/ICanBoogie/bin-http/actions/workflows/test.yml/badge.svg?branch=6.0)](https://github.com/ICanBoogie/bin-http/actions/workflows/test.yml)
-[![Static Analysis](https://github.com/ICanBoogie/bin-http/actions/workflows/static-analysis.yml/badge.svg?branch=6.0)](https://github.com/ICanBoogie/bin-http/actions/workflows/static-analysis.yml)
-[![Code Style](https://github.com/ICanBoogie/bin-http/actions/workflows/code-style.yml/badge.svg?branch=6.0)](https://github.com/ICanBoogie/bin-http/actions/workflows/code-style.yml)
+[![Tests](https://github.com/ICanBoogie/bind-http/actions/workflows/test.yml/badge.svg?branch=7.0)](https://github.com/ICanBoogie/bind-http/actions/workflows/test.yml)
+[![Static Analysis](https://github.com/ICanBoogie/bind-http/actions/workflows/static-analysis.yml/badge.svg?branch=7.0)](https://github.com/ICanBoogie/bind-http/actions/workflows/static-analysis.yml)
+[![Code Style](https://github.com/ICanBoogie/bind-http/actions/workflows/code-style.yml/badge.svg?branch=7.0)](https://github.com/ICanBoogie/bind-http/actions/workflows/code-style.yml)
 
 
 
